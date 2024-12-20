@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="concursantes">
+      <div class="marco-ruleta">
+        <svg viewBox="0 0 217.96 218.01">
+          <path d="M108.9 9a100 100 0 11-58.7 19.11A100 100 0 01108.9 9zm0-9a108.9 108.9 0 1048.76 11.46A109 109 0 00108.9 0z" fill="#ffffff"/>
+          <circle cx="108.98" cy="4.44" r="2.5" fill="#ff6100"/>
+          <circle cx="108.98" cy="213.59" r="2.5" fill="#ff6100"/>
+          <circle cx="76.67" cy="9.55" r="2.5" fill="#ff6100"/>
+          <circle cx="141.3" cy="208.47" r="2.5" fill="#ff6100"/>
+          <circle cx="47.51" cy="24.41" r="2.5" fill="#ff6100"/>
+          <circle cx="170.45" cy="193.62" r="2.5" fill="#ff6100"/>
+          <circle cx="24.38" cy="47.54" r="2.5" fill="#ff6100"/>
+          <circle cx="193.59" cy="170.48" r="2.5" fill="#ff6100"/>
+          <circle cx="9.52" cy="76.7" r="2.5" fill="#ff6100"/>
+          <circle cx="208.44" cy="141.33" r="2.5" fill="#ff6100"/>
+          <circle cx="4.4" cy="109.01" r="2.5" fill="#ff6100"/>
+          <circle cx="213.56" cy="109.01" r="2.5" fill="#ff6100"/>
+          <circle cx="9.52" cy="141.33" r="2.5" fill="#ff6100"/>
+          <circle cx="208.44" cy="76.7" r="2.5" fill="#ff6100"/>
+          <circle cx="24.38" cy="170.48" r="2.5" fill="#ff6100"/>
+          <circle cx="193.59" cy="47.54" r="2.5" fill="#ff6100"/>
+          <circle cx="47.51" cy="193.62" r="2.5" fill="#ff6100"/>
+          <circle cx="170.45" cy="24.41" r="2.5" fill="#ff6100"/>
+          <circle cx="76.67" cy="208.47" r="2.5" fill="#ff6100"/>
+        <circle cx="141.3" cy="9.55" r="2.5" fill="#ff6100"/>
+		</svg>
+      </div>
+      <!-- Canvas de la ruleta -->
+      <canvas id="idcanvas" width="700" height="700"></canvas>
+      
+      <!-- IMAGEN CENTRO RULETA -->
+      <div class="imagen-centro" onclick="sortear()">
+        <img src="img/LOGO RULETA.svg" alt="Logo Ruleta" />
+      </div>  
+
+      <!-- MARCADOR RULETA -->
+      <div class="puntero">
+        <img src="../premios/pin.svg" id="imagen-centro" alt="Imagen Centro" />
+      </div>
+
+      <!-- Botones debajo de la ruleta -->
+      <div class="botones">
+        <a href="index.html"><button id="boton1">Compras mayores a $50.000</button></a>
+        <a href="./150.000.html"><button id="boton2">Compras mayores a $150.000</button></a>
+    </div>
+    </div>
+  </div>
+
+  <div id="modal-premio" style="display: none;">
+    <div id="contenido-premio" style="text-align: center; padding: 20px; background-color: rgba(255, 255, 255, 0.8); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); position: relative;">
+      <p id="texto-premio"></p>
+      <!-- Botón de cerrar con "X" en la esquina -->
+      <button onclick="cerrarModal()" class="cerrar-boton">&times;</button>
+
+
+    </div>
+  </div>
+  
+  
+  
+
+  <!-- Asegúrate de que este script se carga después del contenido -->
+  <script src="js/mayor 150.000.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
