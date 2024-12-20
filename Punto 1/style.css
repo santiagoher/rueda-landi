@@ -1,0 +1,157 @@
+    :root {
+        --colorPricipal: #f15622;
+        --colorSecondario: #2d2d2d;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("img/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #idcanvas {
+        margin: 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .puntero {
+        cursor: pointer;
+        position: absolute;
+        top: 334px;
+        left: 1120px;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        width: 60px;
+        rotate: 280deg;
+    }
+
+    .imagen-centro {
+        cursor: pointer;
+        position: absolute;
+        top: 280px;
+        z-index: 100;
+        left: 640px;
+        width: 10px;
+    }
+
+    .marco-ruleta {
+        position: absolute;
+        top: 30px;
+        left: 408px;
+        z-index: 30;
+        width: 720px;
+        height: 720px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .botones button {
+        background-color: var(--colorPricipal);
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .botones button:hover {
+        background-color: var(--colorSecondario);
+        transform: scale(0.9);
+    }
+
+    #modal-premio {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    #contenido-premio {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #f15622;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #e1451f;
+    }
+
+    
+    @keyframes confetiAnim {
+        0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+        }
+        100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) rotate(720deg);
+        }
+    }
+
+    #confetti-canvas {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999; /* Asegúrate de que esté delante de todo */
+    }
+    
+    .cerrar-boton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: transparent;
+        color: #f15622;
+        border: none;
+        padding: 5px 10px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        line-height: 0;
+    }
+    
+    .cerrar-boton:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
